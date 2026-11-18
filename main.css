@@ -1,0 +1,13 @@
+body{
+    width: 350px
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+section input{
+    margin:10px;
+    width: 200px;
+}

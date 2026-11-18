@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Артилерийский калькулятор</title>
+    <link rel="stylesheet" href="main1.css">
+</head>
+<body>
+    <header>
+        <h1>Aртилерийский калькулятор</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Табличный прицел</h2>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Верхний прицел" id="upper" oninput="tabl()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Нижний прицел" id="down" oninput="tabl()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="50 или 100" id="rangelevel" oninput="tabl()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="100 часть дальности" id="rangepart" oninput="tabl()">
+            <input type="text" placeholder="Результат" readonly id="result1">
+        </section>
+
+        <section>
+            <h2>Разность высот</h2>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Своя" id="own" oninput="elevation()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Цели" id="target" oninput="elevation()">
+            <input type="text" placeholder="Результат" readonly id="result2">
+        </section>
+
+        <section>
+            <h2>Поправка высоты</h2>
+            <input type="number" inputmode="decimal"  placeholder="Значение из таблицы" id="tablevalue" oninput="correction()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Результат" readonly id="result3">
+        </section>
+
+        <section>
+            <h2>Исчисленный прицел (ELV)</h2>
+            <input type="text" placeholder="Результат" readonly id="result4">
+        </section>
+
+        <!--<section>
+            <h2>Поправки на ветер</h2>
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Сила ветра (3)" id="windforce" oninput="wind()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="Значение из таблицы" id="tablevaluewind" oninput="wind()">
+            <input type="number" inputmode="numeric" pattern="[0-9]*" placeholder="1 или 0.5" id="direction" oninput="wind()">
+            <input type="text" placeholder="Результат" readonly id="result5">
+        </section>-->
+    </main>
+    <script src="./calculate.js"></script>
+</body>
+</html>
